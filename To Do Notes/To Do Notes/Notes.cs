@@ -1,1 +1,3 @@
-﻿//I need to change the Collatz program so it displays all the numbers it runs threw in the while loop.
+﻿//I need to add my fibinachi program tonight.
+﻿//Attempt to improve/simplify my programs.
+﻿//I need to make some new math programs.
