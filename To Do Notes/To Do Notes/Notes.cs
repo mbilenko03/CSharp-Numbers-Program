@@ -1,0 +1,1 @@
+﻿//I need to change the Collatz program so it displays all the numbers it runs threw in the while loop.
