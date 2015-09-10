@@ -15,7 +15,8 @@ namespace SemiPrimeFactorization
       bool result = (int.TryParse(Console.ReadLine(), out number));
       if (result == true)
       {
-        //improgress
+        //develope primes from 0<p<sqrt(n)
+        //test them
       }
       else
       {
