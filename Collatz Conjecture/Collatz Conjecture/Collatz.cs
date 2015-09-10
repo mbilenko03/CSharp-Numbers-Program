@@ -11,7 +11,6 @@ namespace Collatz_Theory
     static void Main(string[] args)
     {
       Console.WriteLine("Enter what number you want tested: ");
-
       double number;
       if (double.TryParse(Console.ReadLine(), out number))
       {
@@ -30,13 +29,13 @@ namespace Collatz_Theory
         if (collatzVal % 2 == 0)
         {
           collatzVal = collatzVal / 2;
-          Console.WriteLine("[math:" + i + "] collatzVal / two ==> " + collatzVal);
+          Console.WriteLine("[math:{0}] collatzVal / two ==> {1}", i, collatzVal);
         }
 
         else if (collatzVal % 2 == 1)
         {
           collatzVal = (3 * collatzVal) + 1;
-          Console.WriteLine("[math:" + i + "] collatzVal * 3 + 1 ==> " + collatzVal);
+          Console.WriteLine("[math:{0}] (collatzVal * three) + one ==> {1}", i, collatzVal);
         }
         else
         {
@@ -50,11 +49,11 @@ namespace Collatz_Theory
       if (success)
       {
         i = i - 1;
-        Console.WriteLine("The number " + orig + " worked, taking " + i + " steps to get to " + collatzVal + ".");
+        Console.WriteLine("The number {0} worked, taking {1} steps to get to {2}.", orig, i, collatzVal);
       }
       else
       {
-        Console.WriteLine("The number " + orig + " is invalid. Please enter a positive integer!");
+        Console.WriteLine("The number {0} is invalid. Please enter a positive integer!", orig);
       }
     }
   }
