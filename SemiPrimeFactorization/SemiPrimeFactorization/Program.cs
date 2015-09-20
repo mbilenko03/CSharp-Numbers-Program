@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SemiPrimeFactorization
 {
-  class Program
+  internal class Program
   {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
       Console.WriteLine("Enter what term you want: ");
       int number;
@@ -22,7 +22,6 @@ namespace SemiPrimeFactorization
       {
         Console.WriteLine("Your Imput {0} is Invalid", number);
       }
-      
     }
   }
 }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace FactorialPractice
 {
-  class FactorialPracticeProgram
+  internal class FactorialPracticeProgram
   {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
       Console.WriteLine("Enter a number:");
       string imFactorial = Console.ReadLine();
@@ -22,15 +22,14 @@ namespace FactorialPractice
       Console.WriteLine("Time Elapsed is " + sw.Elapsed);
     }
 
-    static double FactorialOpperation(int numFactorial)
+    private static double FactorialOpperation(int numFactorial)
     {
       double ansFactorial = 1;
       for (int i = 2; i <= numFactorial; i++)
       {
-        ansFactorial = ansFactorial * i;
+        ansFactorial = ansFactorial*i;
       }
       return ansFactorial;
     }
-
   }
 }

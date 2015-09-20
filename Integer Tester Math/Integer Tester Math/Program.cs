@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-  class IntegerTester
+  internal class IntegerTester
   {
-
     #region Intiger Tester
 
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
       double number;
       do
@@ -23,11 +22,11 @@ namespace Test
         bool result = double.TryParse(userNumber, out number);
         if (result == true)
         {
-          if (number % 2 == 0 && number != 0)
+          if (number%2 == 0 && number != 0)
           {
             Console.WriteLine(number + " is even.");
           }
-          else if (number % 2 == 1)
+          else if (number%2 == 1)
           {
             Console.WriteLine(number + " is odd.");
           }
@@ -40,15 +39,14 @@ namespace Test
           {
             Console.WriteLine(number + " is not an integer");
           }
-
         }
         else
         {
           Console.WriteLine("It is not a number... You can't fool us!");
         }
-      }
-      while (true);
+      } while (true);
     }
+
     #endregion
   }
 }

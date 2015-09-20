@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fibinachi_Sequence
 {
-  class FibinachiSequence
+  internal class FibinachiSequence
   {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
       Console.WriteLine("Enter what term you want: ");
       string readTerm = Console.ReadLine();
@@ -19,9 +19,8 @@ namespace Fibinachi_Sequence
       phiFibi(useTerm, printList);
     }
 
-    static int[] listFibi(int useTerm)
+    private static int[] listFibi(int useTerm)
     {
-
       int[] arrFibi = new int[useTerm];
       int initialCount = 1;
       int fibiCounter = 0;
@@ -36,9 +35,8 @@ namespace Fibinachi_Sequence
       return arrFibi;
     }
 
-    static void printFibi(int[] arrFibi)
+    private static void printFibi(int[] arrFibi)
     {
-
       for (int i = 0; i < arrFibi.Length; i++)
       {
         int printNumber = arrFibi[i];
@@ -47,7 +45,7 @@ namespace Fibinachi_Sequence
       Console.WriteLine();
     }
 
-    static void sumFibi(int[] arrFibi)
+    private static void sumFibi(int[] arrFibi)
     {
       //Note this method is only for extra practice and has no purpose
       int fibiHolder = 0;
@@ -60,7 +58,7 @@ namespace Fibinachi_Sequence
       Console.WriteLine("The Numbers have a Sum of " + fibiHolder);
     }
 
-    static void phiFibi(int useTerm, int[] arrFibi)
+    private static void phiFibi(int useTerm, int[] arrFibi)
     {
       int lastTerm = useTerm - 1;
       int secondLastTerm = useTerm - 2;
@@ -69,15 +67,13 @@ namespace Fibinachi_Sequence
       {
         int lastFibi = arrFibi[lastTerm];
         int secondLastFibi = arrFibi[secondLastTerm];
-        double ratioFibi = (double)lastFibi / (double)secondLastFibi;
+        double ratioFibi = (double) lastFibi/(double) secondLastFibi;
         Console.WriteLine("The phi ratio is " + ratioFibi);
       }
       catch (System.IndexOutOfRangeException)
       {
         Console.WriteLine("To little information is given to have a ratio.");
-
       }
-
     }
   }
 }
